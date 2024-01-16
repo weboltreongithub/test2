@@ -7,4 +7,4 @@ jobs:
       - name: Use remote action
         uses: weboltreongithub/test1@v2.0
         with:
-            who-to-greet: 'Ciao'
+            who-to-greet: 'New Github Repo'
