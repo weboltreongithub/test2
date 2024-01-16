@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Use remote action
-        uses: weboltreongithub/test1
+        uses: weboltreongithub/test1@v2.0
