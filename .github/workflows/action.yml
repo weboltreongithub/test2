@@ -1,10 +1,21 @@
-name: sample action
-on: push
+name: C/C++ CI
+
+on:
+  push:
+      branches: [ main ]
+
 jobs:
-  remote-hello-world:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Use remote action
-        uses: weboltreongithub/test1@v2.0
-        with:
-            who-to-greet: 'New Github Repo'
+  build-and-test:
+      runs-on: ubuntu-latest
+
+      steps:
+
+      - uses: actions/checkout@v2
+      - name: install cppunit
+        run: sudo apt install -y libcppunit-dev
+      
+      - name: configure
+        run: ./configure
+      
+      - name: make
+        run: make
