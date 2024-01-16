@@ -6,3 +6,5 @@ jobs:
     steps:
       - name: Use remote action
         uses: weboltreongithub/test1@v2.0
+        with:
+            who-to-greet: 'Ciao'
