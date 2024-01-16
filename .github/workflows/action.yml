@@ -1,0 +1,8 @@
+name: sample action
+on: push
+jobs:
+  remote-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use remote action
+        uses: weboltreongithub/test1
