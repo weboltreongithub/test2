@@ -21,4 +21,9 @@ jobs:
         run: make
 
       - name: App execution
-        run: ./hello
+        run: |
+            output=$(./hello)
+            if [ "${output}" != "Hello, World!" ]; then
+                echo "Error in app response"
+                exit 1
+            fi
